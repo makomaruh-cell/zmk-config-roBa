@@ -29,29 +29,19 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
+        BT0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <22 28>;
         };
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
+        BT1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <23 28>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        BT2 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <24 28>;
         };
     };
 
