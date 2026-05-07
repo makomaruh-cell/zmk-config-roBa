@@ -69,7 +69,6 @@
 
             label = "MKP_EXIT_AML";
         };
-
     };
 
     behaviors {
@@ -86,10 +85,11 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             // 追加: スクロールのタップ時間を設定 (20ms)
+
             tap-ms = <20>;
         };
-
     };
 
     keymap {
@@ -103,7 +103,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 LANG2  &lt 2 SPACE  &lt 3 LANG1      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         FUNCTION {
@@ -137,10 +137,10 @@
 
         MOUSE {
             bindings = <
-&to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R           &to_layer_0 T                                    &to_layer_0 Y    &to_layer_0 U  &kp LC(T)  &to_layer_0 O  &mo 5
-&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F           &to_layer_0 G  &trans                 &kp LC(V)  &kp LC(RS(TAB))  &mkp MB1       &mkp MB3   &mkp MB2       &kp LC(TAB)
-&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V           &to_layer_0 B  &trans                 &kp LC(C)  &to_layer_0 N    &mkp MB4       &kp LC(W)  &mkp MB5       &trans
-&trans         &trans         &trans         &to_layer_0 LANGUAGE_2  &trans         &to_layer_0 LANG1      &trans     &trans                                                    &trans
+&to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R           &to_layer_0 T                                    &to_layer_0 Y    &to_layer_0 U      &kp LC(T)          &to_layer_0 O      &mo 5
+&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F           &to_layer_0 G  &trans                 &kp LC(V)  &kp LC(RS(TAB))  &mkp_exit_AML MB1  &mkp_exit_AML MB3  &mkp_exit_AML MB2  &kp LC(TAB)
+&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V           &to_layer_0 B  &trans                 &kp LC(C)  &to_layer_0 N    &mkp MB4           &kp LC(W)          &mkp MB5           &trans
+&trans         &trans         &trans         &to_layer_0 LANGUAGE_2  &trans         &to_layer_0 LANG1      &trans     &trans                                                                    &trans
             >;
         };
 
